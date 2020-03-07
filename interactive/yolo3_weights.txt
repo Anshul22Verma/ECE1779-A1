@@ -1,0 +1,3 @@
+yolo3 weights file is too large to upload in a git repository.
+
+It can be downloaded from https://pjreddie.com/darknet/yolo/
