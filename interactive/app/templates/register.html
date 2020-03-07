@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title> Sign Up </title>
+{% endblock title %}
+
+{% block content %}
+    <div class='container'>
+            <h1 align = 'center' style = 'margin-left:5%'> Register </h1>
+			<div class='formform'>
+                <form id='forma' action = "{{url_for('register')}}" method = "POST">
+                    <label>New Username:</label>
+                    <input type='string' name='username' value='{{username if username != None}}' placeholder='Enter Username' required />
+                    <br>
+                    <label>New Password:</label>
+                    <input type='password' minlength = 1 name='password' placeholder="Enter Password" style='margin-left:0.725%' required />
+                </form>
+                <button id = 'submit' type = 'submit' form = 'forma' value = 'submit' style='margin-left:15%'>Register</button>
+                <br>
+                <br>
+                <br>
+				<button id = 'reset' type='button' onclick="window.location.href='{{url_for('main')}}';" style='margin-left:6.25%'>Go Back</button>
+                <button id = 'reset' type='button' onclick="window.location.href='{{url_for('register')}}';" style='margin-left:3.75%'>Reset</button>
+			</div>
+			<div id="IOD">
+				<h2 align= 'left'> Image<br>Object<br>Detection</h2>
+			</div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,221 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(background_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    }
+
+.container{
+    margin: 5% auto;
+    background-color : GhostWhite;
+    padding: 1% 1% 8% 1.5%;
+    height:100%;
+    max-width:50%;
+    overflow: auto;
+    box-shadow:  4px 4px 8px 0px  rgba(0,0,0,0.2);
+    }
+
+
+input[type=string], input[type=password] {
+  width: 60%;
+  padding: 8px 5px;
+  margin: 8px 0 ;
+  maxlength = 100;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.formform {
+    padding:0% 1% 1% 1%;
+    width : 60%;
+    right:0;
+    float: right;
+ }
+
+h1 {
+font-size : 3vw;
+padding: 5px;
+}
+
+#IOD{
+float: left;
+width:25%;
+margin: -3% 5%;
+}
+
+h2 {
+    font-size : 2vw;
+    padding: 5px;
+    line-height: 1.5;
+    color: #000066;
+}
+h3 {
+    font-size : 1.2vw;
+    padding: 10px;
+    line-height: 1;
+    color: #000066;
+}
+#registered{
+    display:none;
+    margin:10% auto;
+}
+
+
+.container_profile{
+    margin: 1% auto;
+    margin-bottom:1% ;
+    background-color : GhostWhite;
+    padding: 1% 1% 1% 1%;
+    max-height:700px ;
+    max-width:80%;
+    border : 1px solid #888;
+    overflow: auto;
+    box-shadow:  4px 4px 8px 0px  rgba(0,0,0,0.2);
+    }
+
+.gallery {
+    border : 1px solid #888;
+    padding:0% 1% 1% 1%;
+    margin:5% 0%;
+    width : 75%;
+    max-height:500px;
+    right:0;
+    float: right;
+    white-space: nowrap;
+    overflow:auto;
+    }
+
+#IOD1{
+float: left;
+width:20%;
+height:100%;
+}
+
+.column {
+  float: left;
+  width: 32%;
+
+  padding: 0.5%;
+}
+
+.column:hover {opacity: 0.7;}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#user {
+    margin:1%;
+    }
+
+#uploadform{
+
+margin: 10% 0% 0% 0%;
+float: bottom;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.h02{ font-size:2vw;}
+
+#down {
+max-width:50%;
+border-bottom:3px solid black;
+}
+
+.modalcontainer{
+    display: block; /* Hidden by default */
+    margin: 1% auto;
+    padding: 1% 1% 1% 1%;
+    background-color : GhostWhite;
+    padding: 5% 5% 5% 5%;
+    height:75% ;
+    max-width:50%;
+    border : 1px solid #888;
+    overflow: auto;
+    box-shadow:  4px 4px 8px 0px  rgba(0,0,0,0.2);
+    }
+
+.modalgallery {
+    padding:0% 1% 1% 1%;
+    max-width : 100%;
+    margin: auto;
+    right:0;
+    float: none;
+    white-space: nowrap;
+    overflow:auto;
+    }
+
+.isa_info {
+    margin: 5px 0px;
+    padding:12px;
+    }
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    }
+.isa_info i{
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+    }
+
+.isa_err {
+    margin: 5px 0px;
+    padding:12px;
+    background-color: #FFD2D2;
+    }
+.isa_err {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    }
+.isa_err i{
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+    }
+
+#submit{
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background-color: #1955d9;
+    color: white;
+    border: 2px solid blue;
+    transition-duration: 0.5s;
+}
+#submit:hover {
+ background-color: white;
+ color: black;
+}
+#reset{
+    font-size: 16px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background-color: #000066;
+    color: white;
+    border: 2px solid #000066;
+    transition-duration: 0.5s;
+}
+#reset:hover {
+    background-color: white;
+    color: black;
+}

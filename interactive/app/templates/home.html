@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title> {{username}}/Home </title>
+{% endblock title %}
+
+{% block content %}
+		<div class="container_profile">
+			<div class="gallery" >
+				<h2 align="left"> Gallery </h2>
+					<div class="row">
+					{% for row in L %}
+						<div class="column">
+							<img src= "{{ url_for('static', filename = row[1] ) }}" onclick="foo('{{row[0]}}','{{url_for('static',filename=row[1])}}','{{url_for('static',filename=row[2])}}')" alt= '{{ row[0] }}' style="max-width:100%" />
+						</div>
+					{% endfor %}
+					</div>
+
+			</div>
+
+			<div id="IOD1">
+                 <div class="row">
+                      <div class="column">
+                        <h2 align='left' style='margin-right:1%'> Image<br>Object<br>Detection</h2>
+                      </div>
+                      <div class="column" style = 'width = 100%'>
+                            <button id = 'reset' type='button' onclick="window.location.href='{{url_for('logout')}}';" style='margin-left: 1300%'>Logout</button>
+                      </div>
+                 </div>
+
+
+				<div id="user">
+					<h2 align='left' style='margin-left:10px'> Hi {{username}}, </h2>
+                    <h3 align='left' style='margin-left:10px'>Click on the images to see their object detected image</h3>
+				</div>
+                <br>
+                <br>
+                <br>
+				<div id="uploadform">
+                    <h3>Run object detection on a new image?</h3>
+                    <button id = 'reset' type='button' onclick="window.location.href='{{url_for('upload', username= username)}}';" style='margin-left:20px'>Upload</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div id='zoom' class = 'modal'>
+			<div  class='modalcontainer'>
+
+				<div class='modalgallery' align = 'center'>
+				<p id='down'  align = 'center'>Click on images to download
+					<br>Click outside to go back to home				</p>
+					<h3 class='h02' align = 'center'> Original Image </h3>
+					<a id='downloadimg' download>
+						<img id='img1' title='image name' alt='Snow' style='max-width:70%' />
+					</a>
+				</div>
+				<div class='modalgallery' align='center'>
+					<h3 class='h02' align = 'center'> Object Detected Image </h3>
+					<a id='downloadobjimg' download>
+						<img id='img2' title='obj image name' alt='Snow' style='max-width:70%' />
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+
+		var modal = document.getElementById('zoom');
+
+		function foo(img, imgloc, objloc) {
+			var modal_a = document.getElementById("downloadimg");
+			var modal_img = document.getElementById("img1");
+			var modal_a_obj = document.getElementById("downloadobjimg");
+			var modal_img_obj = document.getElementById("img2");
+			modal_a.href = imgloc;
+
+			modal_img.src = imgloc;
+			modal_img.alt= img;
+			modal_a_obj.href = objloc;
+			modal_img_obj.src = objloc;
+			modal_img_obj.alt= 'obj_'+img;
+			document.getElementById('zoom').style.display='block';
+		}
+
+		// Get the modal
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+		</script>
+{% endblock content %}

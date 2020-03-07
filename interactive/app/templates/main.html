@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title> Login </title>
+{% endblock title %}
+
+{% block content %}
+    <div class='container'>
+        <h1 align = 'center'> Login </h1>
+
+
+    <div class='formform'>
+        <form method = 'post' action = '{{url_for("main", username = username)}}' id = 'form1'>
+            <label align>Username : </label>
+            <input type='string' name='username' value='{{username if username != None}}' placeholder='Enter Username' required />
+            <br>
+            <label>Password : </label>
+            <input type = 'password' name = 'password' placeholder='Enter Password' style='margin-left:0.650%' required />
+        </form>
+        <button id = 'submit' type = 'submit' form = 'form1' value = 'submit' style='margin-left:12.5%'>Login</button>
+        <br>
+        <br>
+        <br>
+        <b> New user ?</b>
+        <button id = 'reset' onclick="window.location.href='{{url_for('register')}}';" style='margin-left:2.5%'>Register</button>
+    </div>
+
+    <div id='IOD' align='left'>
+        <h2> Image<br>Object<br>Detection </h2>
+    </div>
+    </div>
+{% endblock content %}

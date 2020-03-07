@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylecss.css') }}">
+
+    {% block title %}
+    {% endblock %}
+</head>
+<html>
+    <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class=flashes>
+        {% for type, message in messages %}
+            <li class='{{type}}'>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
