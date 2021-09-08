@@ -3,4 +3,4 @@ mysql.connector==8.0.18
 werkzeug==0.16.0
 opencv==3.4.2
 numpy==1.17.3
-pillow==7.0.0
+pillow==8.3.2
